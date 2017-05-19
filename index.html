@@ -75,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/18/1小时学会用Hexo搭建个人博客/">1小时学会用Hexo搭建个人博客</a>
+      <a class="article-title" href="/2017/05/18/1小时学会用Hexo搭建个人博客/">30分钟学会用Hexo搭建个人博客</a>
     </h1>
   
 
@@ -83,7 +83,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很早就想搭建自己的个人博客，就像<a href="http://mindhacks.cn/" target="_blank" rel="external">刘未鹏 | Mind Hacks</a>、<a href="http://www.liaoxuefeng.com/" target="_blank" rel="external">廖雪峰的官方网站</a>等大牛那样，能够将个人的学习、经验展现出来，是多么好玩且有意义的一件事情。<br>正在学习前端中，是时候试试搭建个人博客了。找了一份如何搭建博客的视频，抱着花费一个月时间把博客建立出来的觉悟。幸好，开始前，问了问琚老师搭建博客复杂程度，好更精确地估算所用时间。<br>琚老师提到了Hexo。<br>然后用近1小时来查找相关资料，又1小时竟然就将博客成功搭建起来咧。<br>此教程不需要有任何编程基础，跟着步骤，只要能做到只字不差的阅读和操作，就能够搭建起属于你自己的个人博客。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很早就想搭建自己的个人博客，就像<a href="http://mindhacks.cn/" target="_blank" rel="external">刘未鹏 | Mind Hacks</a>、<a href="http://www.liaoxuefeng.com/" target="_blank" rel="external">廖雪峰的官方网站</a>等大牛那样，能够将个人的学习、经验展现出来，是多么好玩且有意义的一件事情。<br>正在学习前端中，是时候试试搭建个人博客了。找了一份如何搭建博客的视频，抱着花费一个月时间把博客建立出来的觉悟。幸好，开始前，问了问琚老师搭建博客复杂程度，好更精确地估算所用时间。<br>琚老师提到了Hexo。<br>然后用近1小时来查找相关资料，又1小时竟然就将博客成功搭建起来咧。中间浪费了不少时间，如果你能只字不差地按照本教程操作，30分钟甚至更短时间内就可以学会如何用Hexo搭建个人博客了。<br>此教程不需要有任何编程基础，跟着步骤，只要能做到只字不差的阅读和操作，就能够搭建起属于你自己的个人博客。</p>
 <h2 id="一、Why：确立目标"><a href="#一、Why：确立目标" class="headerlink" title="一、Why：确立目标"></a>一、Why：确立目标</h2><p>先不要着急行动，在着手操作前，先停下来思考清楚你为什么想要搭建个人博客。<br>这很重要，经过认真思考过的清晰可行的目标是你成功实现结果的基石。</p>
 <h2 id="二、What：Hexo是什么"><a href="#二、What：Hexo是什么" class="headerlink" title="二、What：Hexo是什么"></a>二、What：Hexo是什么</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>利用Hexo + Github Pages能够迅速搭建颜值爆表的个人博客，关键还是免费的哟。</p>
 <h2 id="三、How：具体步骤"><a href="#三、How：具体步骤" class="headerlink" title="三、How：具体步骤"></a>三、How：具体步骤</h2><h3 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h3><p>Hexo是基于Nodejs的博客系统，在安装Hexo之前需要安装Nodejs；是把博客搭建在免费的GitHub上，所以需要安装Git。</p>
@@ -102,13 +102,13 @@
 <p>⑵配置SSH<br>上传文件需要配置ssh key，不然无法上传。</p>
 <p>###设置name和emai:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name &quot;&lt;your name&gt;&quot;</div><div class="line">git config --global user.email &quot;&lt;your email&gt;&quot;</div></pre></td></tr></table></figure></p>
 <h3 id="生成ssh密钥"><a href="#生成ssh密钥" class="headerlink" title="生成ssh密钥"></a>生成ssh密钥</h3><p><code>ssh-keygen -t rsa -C &quot;&lt;your github&#39;s email&gt;&quot;</code><br>这一步在~/.ssh/下生成了两个文件id_rsa 和 id_rsa.pub</p>
-<h3 id="在Github上添加SSH密钥"><a href="#在Github上添加SSH密钥" class="headerlink" title="在Github上添加SSH密钥"></a>在Github上添加SSH密钥</h3><p>打开上述的id_rsa.pub 文件，复制其内容，在<a href="https://github.com/settings/keys下" target="_blank" rel="external">https://github.com/settings/keys下</a> add new ssh key，</p>
+<h3 id="在Github上添加SSH密钥"><a href="#在Github上添加SSH密钥" class="headerlink" title="在Github上添加SSH密钥"></a>在Github上添加SSH密钥</h3><p>打开上述的id_rsa.pub 文件，复制其内容，在<a href="https://github.com/settings/keys" target="_blank" rel="external">https://github.com/settings/keys</a> 下 add new ssh key，</p>
 <p>⑶将本地文件部署到Github<br>进入你的博客文件夹，找到并打开_config.yml文件，在底部修改 (Deployment部分)输入下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/liming104/liming104.github.io</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
 <p>注意冒号（:）后都有一个空格。</p>
 <p>⑷部署<br>配置好后，<code>hexo g</code>然后<code>hexo d</code><br><a href="/img/7.png">7</a></p>
 <p>有问题的话，通过<code>npm install hexo-deployer-git --save</code>解决。</p>
 <p>之前的步骤如果没什么问题，我们在浏览器中访问<a href="https://liming104.github.io/" target="_blank" rel="external">https://liming104.github.io/</a> ，已经能够看到我们个人的博客了。</p>
-<p>试着写一篇文章，《1小时学会用Hexo搭建个人博客》。<br>我们的新建博客创建在E:\myblog\source_posts\hexo搭建博客系统.md，md后缀是markdown的文件格式。</p>
+<p>试着写一篇文章，《30分钟学会用Hexo搭建个人博客》。<br>我们的新建博客创建在E:\myblog\source_posts\hexo搭建博客系统.md，md后缀是markdown的文件格式。</p>
 <p>hexo g &gt;&gt;创建静态文档<br>hexo s &gt;&gt;本地预览<br>hexo d &gt;&gt;上传github</p>
 <p>从此以后，充分利用你专属的个人博客，记录你的成长轨迹，愉快地玩耍吧！</p>
 <p>参考：<br><a href="https://rotate720deg.github.io/2016/08/09/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/" target="_blank" rel="external">hexo搭建博客系统</a><br><a href="http://www.jianshu.com/p/ed32ac187dbc" target="_blank" rel="external">在Github上搭建一个免费的Hexo博客系统</a></p>
@@ -116,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/18/1小时学会用Hexo搭建个人博客/" data-id="cj2u9iphr0000jci2itikubrw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/18/1小时学会用Hexo搭建个人博客/" data-id="cj2v7my8700016si2ktm67wq3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
@@ -163,7 +163,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/05/18/hello-world/" data-id="cj2u9ipmn0003jci2nlcj5xvs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/05/18/hello-world/" data-id="cj2v7my7h00006si2utleg8m7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,7 +217,7 @@
       <ul>
         
           <li>
-            <a href="/2017/05/18/1小时学会用Hexo搭建个人博客/">1小时学会用Hexo搭建个人博客</a>
+            <a href="/2017/05/18/1小时学会用Hexo搭建个人博客/">30分钟学会用Hexo搭建个人博客</a>
           </li>
         
           <li>
